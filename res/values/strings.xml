@@ -3,6 +3,10 @@
 
     <string name="app_name">AlgoView</string>
     <string name="action_settings">Settings</string>
+
+    <!-- HomePage Values -->
+    <string name="home_title">Choose an algo</string>
+    <string name="title_activity_quick_sort">QuickSortActivity</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>
