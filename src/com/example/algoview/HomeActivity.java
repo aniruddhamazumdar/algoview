@@ -48,6 +48,7 @@ public class HomeActivity extends BaseActivity {
 					@Override
 					public void onItemClick(AdapterView<?> arg0, View arg1,
 							int position, long arg3) {
+						Logger.log("Item Clicked");
 						launchActivity(algoArray[position]);
 					}
 
@@ -56,8 +57,10 @@ public class HomeActivity extends BaseActivity {
 
 	private void launchActivity(String name) {
 		try {
+			String activityName = name.replace(" ", "") + "Activity";
+			Logger.log(activityName);
 			Intent launchIntent = new Intent(HomeActivity.this,
-					Class.forName(name.replace(" ", "") + "Activity"));
+					Class.forName(activityName));
 			startActivity(launchIntent);
 		} catch (ClassNotFoundException e) {
 			Logger.log(e.getMessage());
